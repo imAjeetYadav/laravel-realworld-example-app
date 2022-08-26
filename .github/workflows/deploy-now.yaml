@@ -14,13 +14,13 @@ jobs:
       contents: read
       packages: write
     steps:
-      - name: Fetch project data
-        uses: ionos-deploy-now/retrieve-project-info-action@v1
-        id: project
-        with:
-          api-key: ${{ secrets.IONOS_API_KEY }}
-          project: ${{ secrets.IONOS_PROJECT_ID }}
-          service-host: api-us.ionos.space
+     # - name: Fetch project data
+      #  uses: ionos-deploy-now/retrieve-project-info-action@v1
+       # id: project
+        #with:
+         # api-key: ${{ secrets.IONOS_API_KEY }}
+          #project: ${{ secrets.IONOS_PROJECT_ID }}
+          #service-host: api-us.ionos.space
 
       - name: checkout
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
